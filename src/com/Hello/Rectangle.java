@@ -1,5 +1,6 @@
 package com.Hello;
 
+// Rectangle class
 public class Rectangle implements Shape2DMeasuration {
    double length ,width;
 
@@ -9,7 +10,10 @@ public class Rectangle implements Shape2DMeasuration {
     }
 
     @Override
-    public double area() {
+    public double area() throws InvalidDimensions {
+        if(length <= 0  || width <= 0 ){
+            throw new InvalidDimensions("Dimensions should be greater than 0") ;
+        }
         return length * width;
     }
 
@@ -19,6 +23,7 @@ public class Rectangle implements Shape2DMeasuration {
     }
 }
 
+ // Triangle Class
 class Triangle implements Shape2DMeasuration {
     double hypotenus,base,height;
 
@@ -29,12 +34,18 @@ class Triangle implements Shape2DMeasuration {
     }
 
     @Override
-    public double area() {
+    public double area() throws  InvalidDimensions {
+        if(base <= 0  || height <= 0 ){
+            throw new InvalidDimensions("Dimensions should be greater than 0") ;
+        }
         return  (1 * (base * height) ) / 2 ;
     }
 
     @Override
-    public double perimeter() {
+    public double perimeter() throws InvalidDimensions{
+        if(base <= 0  || height <= 0 ){
+            throw new InvalidDimensions("Dimensions should be greater than 0") ;
+        }
         return hypotenus + base + height;
     }
 }

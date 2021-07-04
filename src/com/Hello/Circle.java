@@ -8,12 +8,18 @@ public abstract class Circle implements Shape2DMeasuration {
       }
 
     @Override
-    public double area() {
-        return Math.PI * radius * radius  ;
+    public double area() throws  InvalidDimensions {
+          if(radius <= 0) {
+              throw new InvalidDimensions("Radius should be greater than 0");
+          }
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public double perimeter() {
+    public double perimeter() throws  InvalidDimensions {
+          if(radius <= 0){
+              throw new InvalidDimensions("Radius should be greater than 0");
+          }
         return 2 * Math.PI * radius;
     }
 }
