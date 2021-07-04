@@ -11,63 +11,91 @@ public class Shapes {
                switch (shape){
 
                    case "Circle" :
-                       System.out.printf(" Enter the radius :  ");
-                        radius = sc.nextDouble();
-                       System.out.println("radius = " +radius);
-                       CalculateCircle calculateCircle = new CalculateCircle(radius);
-                       System.out.printf("area is : %.2f \n" ,calculateCircle.area());
-                       System.out.printf("Circumference of Circle : %.2f \n" ,calculateCircle.perimeter()) ;
+                       try {
+                           System.out.printf(" Enter the radius :  ");
+                           radius = sc.nextDouble();
+                           System.out.println("radius = " + radius);
+                           CalculateCircle calculateCircle = new CalculateCircle(radius);
+                           System.out.printf("area is : %.2f \n", calculateCircle.area());
+                           System.out.printf("Circumference of Circle : %.2f \n", calculateCircle.perimeter());
+                       }catch(Exception e){
+                           System.out.println("Exception Occured  in " +e);
+                   }
                        break;
 
                    case "Square":
-                       System.out.printf("Enter the side : ");
-                       side = sc.nextDouble();
-                       System.out.println("side = " +side);
-                       Square square = new Square(side);
-                       System.out.printf("Area of Square : %.2f \n" ,square.area());
-                       System.out.printf("Perimeter of Square : %.2f \n" ,square.perimeter());
-                        break;
+                       try {
+                           System.out.printf("Enter the side : ");
+                           side = sc.nextDouble();
+                           System.out.println("side = " + side);
+                           Square square = new Square(side);
+                           System.out.printf("Area of Square : %.2f \n", square.area());
+                           System.out.printf("Perimeter of Square : %.2f \n", square.perimeter());
+                       }catch (Exception e){
+                           System.out.println( "Exception Occured in "+e);
+                       }
+                       break;
 
                    case "Rectangle" :
-                       System.out.printf("Enter the length and Width : ");
-                       length = sc.nextDouble();
-                       width =  sc.nextDouble();
-                       System.out.println("length = " +length + "Width =  " +width);
-                        Rectangle rectangle = new Rectangle(length,width);
-                       System.out.printf("Area of Rectangle : %.2f \n" ,rectangle.area());
-                       System.out.printf("Perimeter of Rectangle : %.2f \n" ,rectangle.perimeter());
+                       try {
+                           System.out.printf("Enter the length : ");
+                           length = sc.nextDouble();
+                           System.out.printf("Enter the Width :  ");
+                           width = sc.nextDouble();
+                           System.out.println("length = " + length + " Width =  " + width);
+                           Rectangle rectangle = new Rectangle(length, width);
+                           System.out.printf("Area of Rectangle : %.2f \n", rectangle.area());
+                           System.out.printf("Perimeter of Rectangle : %.2f \n", rectangle.perimeter());
+                       }catch (Exception e){
+                           System.out.println( "Exception Occured in "+e);
+                       }
                        break;
 
                    case "Triangle" :
-                       System.out.printf("Enter the length , Width and Height  : ");
-                       length = sc.nextDouble();
-                       width =  sc.nextDouble();
-                       height = sc.nextDouble();
-                       System.out.println("length :  " +length + " Width : "  + width + " Height : " +height);
-                       Triangle triangle = new Triangle(height,width,length);
-                       System.out.printf("Area of Triangle : %.2f \n" ,triangle.area() );
-                       System.out.printf("Perimeter of Triangle : %.2f \n" ,triangle.perimeter() );
+                       try {
+                           System.out.printf("Enter the  length  : ");
+                           length = sc.nextDouble();
+                           System.out.printf("Enter the  Width    : ");
+                           width = sc.nextDouble();
+                           System.out.printf("Enter the  Height  : ");
+                           height = sc.nextDouble();
+                           System.out.println("length :  " + length + " Width : " + width + " Height : " + height);
+                           Triangle triangle = new Triangle(height, width, length);
+                           System.out.printf("Area of Triangle : %.2f \n", triangle.area());
+                           System.out.printf("Perimeter of Triangle : %.2f \n", triangle.perimeter());
+                       }catch(Exception e){
+                       System.out.println("Exception Occured in "+e);
+                   }
                        break;
 
                        case  "Sphere"   :
-                           System.out.printf(" Enter the radius :  ");
-                           radius = sc.nextDouble();
-                           System.out.println("radius  of  Sphere = " +radius);
-                           Sphere sphere = new Sphere(radius);
-                           System.out.printf("Curved Surface  Area of  Sphere  : %.2f \n " ,sphere.Curved_SurfaceArea() );
-                           System.out.printf("Total Surface  Area of  Sphere  : %.2f \n " ,sphere.Total_SurfaceArea() );
-                           System.out.printf("Volume of  Sphere  : %.2f \n" ,sphere.Volume() );
+                           try {
+                               System.out.printf(" Enter the radius :  ");
+                               radius = sc.nextDouble();
+                               System.out.println("radius  of  Sphere = " + radius);
+                               Sphere sphere = new Sphere(radius);
+                               System.out.printf("Curved Surface  Area of  Sphere  : %.2f \n ", sphere.Curved_SurfaceArea());
+                               System.out.printf("Total Surface  Area of  Sphere  : %.2f \n ", sphere.Total_SurfaceArea());
+                               System.out.printf("Volume of  Sphere  : %.2f \n", sphere.Volume());
+                           }catch (Exception e){
+                               System.out.println("Exception Occured in "+ e);
+                           }
                         break;
 
                    case "Cylinder" :
-                       System.out.printf("Enter the Radius and Height of Cylinder : ");
-                       radius = sc.nextDouble();
-                       height =  sc.nextDouble();
-                       System.out.println("radius = " +radius  + "Height =  "  +height );
-                       Cylinder cylinder = new Cylinder(radius,height);
-                       System.out.printf("Curved Surface Area of Cylinder   : %.2f  \n", cylinder.Curved_SurfaceArea() );
-                       System.out.printf("Total Surface Area of Cylinder   : %.2f  \n", cylinder.Total_SurfaceArea() );
-                       System.out.printf("Volume of Cylinder   : %.2f  \n", cylinder.Volume() );
+                       try {
+                           System.out.printf("Enter the Radius : ");
+                           radius = sc.nextDouble();
+                           System.out.printf("Enter the Height : ");
+                           height = sc.nextDouble();
+                           System.out.println("radius = " + radius + "Height =  " + height);
+                           Cylinder cylinder = new Cylinder(radius, height);
+                           System.out.printf("Curved Surface Area of Cylinder   : %.2f  \n", cylinder.Curved_SurfaceArea());
+                           System.out.printf("Total Surface Area of Cylinder   : %.2f  \n", cylinder.Total_SurfaceArea());
+                           System.out.printf("Volume of Cylinder   : %.2f  \n", cylinder.Volume());
+                       }catch (Exception e){
+                           System.out.println("Exception Occured in" +e);
+                       }
                        break;
 
                    default:
@@ -79,15 +107,20 @@ public class Shapes {
 
 
  interface Shape2DMeasuration {
-     double area();
-     double perimeter();
+     double area() throws InvalidDimensions;
+     double perimeter() throws InvalidDimensions;
 
   }
 
   interface  Shape3DMeasuration {
-        double Curved_SurfaceArea();
-        double Total_SurfaceArea();
-        double  Volume();
+        double Curved_SurfaceArea() throws InvalidDimensions;
+        double Total_SurfaceArea() throws InvalidDimensions;
+        double  Volume() throws InvalidDimensions;
    }
 
 
+   class InvalidDimensions extends Exception{
+    InvalidDimensions(String s){
+    super(s);
+    }
+   }
