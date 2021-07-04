@@ -1,4 +1,4 @@
-package com.Hello;
+package com.Hello.Assignment2;
 
 // Rectangle class
 public class Rectangle implements Shape2DMeasuration {

@@ -1,4 +1,6 @@
-package com.Hello;
+package com.Hello.Assignment2;
+import com.Hello.Square;
+
 import  java.util.*;
 
 public class Shapes {
@@ -106,21 +108,10 @@ public class Shapes {
 }
 
 
- interface Shape2DMeasuration {
-     double area() throws InvalidDimensions;
-     double perimeter() throws InvalidDimensions;
-
-  }
-
-  interface  Shape3DMeasuration {
+interface  Shape3DMeasuration {
         double Curved_SurfaceArea() throws InvalidDimensions;
         double Total_SurfaceArea() throws InvalidDimensions;
         double  Volume() throws InvalidDimensions;
    }
 
 
-   class InvalidDimensions extends Exception{
-    InvalidDimensions(String s){
-    super(s);
-    }
-   }

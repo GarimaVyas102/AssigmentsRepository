@@ -1,4 +1,4 @@
-package com.Hello;
+package com.Hello.Assignment2;
 
 public abstract class Circle implements Shape2DMeasuration {
     private  double radius;
@@ -8,7 +8,7 @@ public abstract class Circle implements Shape2DMeasuration {
       }
 
     @Override
-    public double area() throws  InvalidDimensions {
+    public double area() throws InvalidDimensions {
           if(radius <= 0) {
               throw new InvalidDimensions("Radius should be greater than 0");
           }

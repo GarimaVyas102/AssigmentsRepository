@@ -1,4 +1,5 @@
-package com.Hello;
+package com.Hello.Assignment2;
+
 import java.util.*;
 
 public class Main {
@@ -16,9 +17,9 @@ public class Main {
           System.out.println(" 1) Circle \n 2) Rectangle \n 3) Square \n 4) Triangle   \n 5) Sphere \n 6) Cylinder  ");
           String shape = sc.next();
           System.out.println("You choose "+shape );
-        Shapes shapes = new Shapes();
-        shapes.selectShapes(shape);
-         choose();
+          Shapes shapes = new Shapes();
+          shapes.selectShapes(shape);
+          choose();
 
       }
  }

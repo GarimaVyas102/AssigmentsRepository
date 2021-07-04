@@ -1,6 +1,6 @@
-package com.Hello;
+package com.Hello.Assignment2;
 
-public class Cylinder implements  Shape3DMeasuration {
+public class Cylinder implements Shape3DMeasuration {
      double radius ,height;
 
     public Cylinder(double radius, double height) {
@@ -9,7 +9,7 @@ public class Cylinder implements  Shape3DMeasuration {
     }
 
     @Override
-    public double Curved_SurfaceArea() throws InvalidDimensions{
+    public double Curved_SurfaceArea() throws InvalidDimensions {
         if(radius <= 0 || height <=0 ) {
             throw new InvalidDimensions("Radius should be greater than 0");
         }
